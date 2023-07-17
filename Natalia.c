@@ -2,19 +2,33 @@
 #include <math.h>
 #include<stdbool.h>
 int main() {
-    int valorNeto = 0;
-    int sueldoBasico = 1780000;
-    int tipoTrabajador = 1 ;// 1.) Contratista 2.) Planta
+    int codigo = 437952;
+    int cif1 = codigo / 100000;
+    int mod1 = codigo % 100000;
+    int cif2 = mod1 / 10000;
+    int mod2 = mod1 % 10000;
+    int cif3 = mod2 / 1000;
+    int mod3 = mod2 % 1000;
+    int cif4 = mod3 / 100;
+    int mod4 = mod3 % 100;
+    int cif5 = mod4 / 10;
+    int cif6 = mod4 % 10;
 
-    if (tipoTrabajador == 2 && sueldoBasico >= 437000){
-        sueldoBasico -= (sueldoBasico * 7.8) / 100;
-    }else if (tipoTrabajador == 2 && sueldoBasico < 437000){
-        sueldoBasico += 40000;
-    }else if (tipoTrabajador == 2 && sueldoBasico < 1750000){
-        sueldoBasico -= sueldoBasico * 0.1;
-    }
-
-    if (tipoTrabajador == 1 && sueldoBasico > 1500000){
-        sueldoBasico -= sueldoBasico * 0.10;
+    if (cif1 + cif6 > cif5){
+        //print("Voleta Valida")
+        if (cif2 >= 1 && cif2 <= 5){
+            //print("Tipo de Entrada: Gramilla")
+        }else{
+            //print("Tipo de Entrada: General")
+        }
+        
+        if (((cif3 * 100) + cif4) % 2 == 0){
+            //print("Puerta: 1 \nHora: 19:00")
+        }else{
+            //print("Puerta: 2 \nHora: 20:00")
+        }
+        
+    }else{
+        //print("Voleta Invalida")
     }
 }
