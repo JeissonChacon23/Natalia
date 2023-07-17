@@ -1,34 +1,18 @@
 #include<stdio.h>
 #include <math.h>
 #include<stdbool.h>
-int main() {
-    int codigo = 437952;
-    int cif1 = codigo / 100000;
-    int mod1 = codigo % 100000;
-    int cif2 = mod1 / 10000;
-    int mod2 = mod1 % 10000;
-    int cif3 = mod2 / 1000;
-    int mod3 = mod2 % 1000;
-    int cif4 = mod3 / 100;
-    int mod4 = mod3 % 100;
-    int cif5 = mod4 / 10;
-    int cif6 = mod4 % 10;
-
-    if (cif1 + cif6 > cif5){
-        //print("Voleta Valida")
-        if (cif2 >= 1 && cif2 <= 5){
-            //print("Tipo de Entrada: Gramilla")
+    int main() {
+        int area = 10000000;
+        int pino = 0;
+        int oyamel = 0;
+        int cedro = 0;
+        if (area > 1000000){
+            pino += ((area * 0.70) / 10) / 8;      //70%
+            oyamel += ((area * 0.20) / 15) / 15;   //20%
+            cedro += ((area * 0.10) / 18) / 10;    //10%
         }else{
-            //print("Tipo de Entrada: General")
+            pino += ((area * 0.50) / 10) / 8;      //50%
+            oyamel += ((area * 0.30) / 15) / 15;   //30%
+            cedro += ((area * 0.20) / 18) / 10;    //20%
         }
-        
-        if (((cif3 * 100) + cif4) % 2 == 0){
-            //print("Puerta: 1 \nHora: 19:00")
-        }else{
-            //print("Puerta: 2 \nHora: 20:00")
-        }
-        
-    }else{
-        //print("Voleta Invalida")
-    }
 }
